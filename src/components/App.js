@@ -5,7 +5,7 @@ import '../styles/App.css';
 class App extends Component {
   constructor(props) {
     super(props)
-    this.id = 0;
+    this.id = 1;
     this.cityList = [{ name: 'Goa', country: 'India' },
     { name: 'Amsterdam', country: 'Netherlands' },
     { name: 'New York', country: 'USA' },
@@ -42,7 +42,7 @@ class App extends Component {
       <div id="main">
         <ol>
           {
-            this.cityList.filter((city)=>city.country==='India').map((city)=>{return <li key={city.name+this.id++}>{city.name}</li>})
+            this.cityList.filter((city)=>city.country==='India').map((city)=>{return <li key={"location"+this.id++}>{city.name}</li>})
           }
         </ol>
       </div>
